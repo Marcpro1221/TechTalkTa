@@ -1,0 +1,56 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: url('./asset/login&signup/virtual-office-girl.svg');
+    background-position: left top;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+#button{
+    cursor: pointer;
+}
+#login_form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 10%;
+}
+#signup_form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 10%;
+}
+input::placeholder{
+    color: grey;
+    text-align: left;
+}
+input:user-valid{
+    outline-color: green;
+}
+input:user-invalid{
+    outline-color: red;
+}
+#username,#password,#signup_username,#signup_password{
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;   
+}
+

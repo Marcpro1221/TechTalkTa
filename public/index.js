@@ -11,7 +11,7 @@ form.addEventListener('submit', (e)=>{
 });
     socket.on('send', (messages)=>{
         let message = document.createElement('li');
-        message.textContent = messages;
+        message.textContent =  `User: ${messages}`;
         messageBody.appendChild(message);
         console.log(message.textContent)
         window.scrollTo(0, document.body.scrollHeight);
