@@ -9,10 +9,10 @@ form.addEventListener('submit', (e)=>{
         input.value = '';
     }
 });
-    socket.on('send', (messages)=>{
-        let message = document.createElement('li');
-        message.textContent =  `User: ${messages}`;
-        messageBody.appendChild(message);
-        console.log(message.textContent)
-        window.scrollTo(0, document.body.scrollHeight);
-    });
+socket.on('send', (messages)=>{
+    let message = document.createElement('li');
+    message.textContent =  `User: ${messages}`;
+    messageBody.appendChild(message);
+    console.log(message.textContent)
+    window.scrollTo(0, document.body.scrollHeight);
+});

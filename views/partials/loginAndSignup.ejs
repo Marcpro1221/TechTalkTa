@@ -11,20 +11,21 @@
     <main> 
         <% if(showLogin){ %>
         <form action="/login" method="POST" id="login_form">
-            <input type="text" id="username" name="userName" autocomplete="off" placeholder="Username">
+            <input type="text" id="username" name="userName" autocomplete="off" placeholder="Email/Username">
             <input required type="password" id="password" name="passWord" autocomplete="off" placeholder="Password">
-            <button type="submit" id="loginbtn">Login</button>
-            <button type="button" id="signup">Sign up here!</button>
+            <div>
+                <button type="submit" id="loginbtn">Login</button>
+                <a href="http://localhost:8080/signup" id="signup-link">New to us? Sign up now</a>
             <p id="login_error"></p>
+            </div>
         </form>
         <% } %>
         <% if(showsignup){ %>
         <form action="/signup" method="POST" id="signup_form">
-            <label for="signup_username">Username</label>
-            <input required type="text" id="signup_username" name="signup_userName" autocomplete="off" minlength="7">
-            <label for="signup_password">Password</label>
-            <input required type="password" id="signup_password" name="signup_passWord" autocomplete="off" minlength="8">
-            <button type="submit" id="signup_button">Sign Up</button>
+            <h2>Welcome</h2>
+            <input required type="text" id="signup_username" name="signup_userName" placeholder="Email/Username" autocomplete="off" minlength="7">
+            <input required type="password" id="signup_password" name="signup_passWord" placeholder="Password" autocomplete="off" minlength="8">
+            <button type="submit" id="signup_button">Register</button>
             <p id="signup_error"></p>  <!-- Display error message -->
         </form>
         <% } %>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend List</title>
+</head>
+<body>
+    <h1>Friend List</h1>
+    <ul id="online-list">
+    </ul>
+    <button type="button" onclick="logout()">logout</button>
+    <script>
+        function logout(){
+            fetch('/logout',{
+                method: 'GET',
+                credentials: "include",
+            })
+            .then(response =>{
+                if(response.redirected){
+                    window.location.href = response.url;
+                }
+            })
+            .catch(error =>{
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
